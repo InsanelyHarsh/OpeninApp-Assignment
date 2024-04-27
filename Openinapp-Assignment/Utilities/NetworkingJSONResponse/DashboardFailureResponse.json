@@ -1,0 +1,7 @@
+{
+	"status": false,
+	"statusCode": 401,
+	"message": "Please login again",
+	"name": "UNAUTHORIZED",
+	"errors": []
+}
