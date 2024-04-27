@@ -13,7 +13,7 @@ struct TopAnalyticsModel {
 }
 
 struct DashboardModel {
-	var links: [Link] = []
+	var links: [DashboardLink] = []
 	var topAnalyticsModel: TopAnalyticsModel = TopAnalyticsModel(todayClicks: "", topLocation: "", topSource: "")
 	var supportWhatsappNumber: String = ""
 }
@@ -51,7 +51,7 @@ struct Model: Codable {
 
 // MARK: - DataClass
 struct DataClass: Codable {
-	var recentLinks, topLinks: [Link]
+	var recentLinks, topLinks: [DashboardLink]
 	var favouriteLinks: [JSONAny]
 	var overallURLChart: [String: Int]?
 
@@ -64,7 +64,7 @@ struct DataClass: Codable {
 }
 
 // MARK: - Link
-struct Link: Codable {
+struct DashboardLink: Codable {
 	var urlID: Int
 	var webLink: String
 	var smartLink, title: String

@@ -146,7 +146,7 @@ struct LinksSectionView: View {
 	
 	
 	@ViewBuilder
-	private func linkDetailCell(_ link:Link) -> some View {
+	private func linkDetailCell(_ link:DashboardLink) -> some View {
 		VStack(spacing: 0) {
 			HStack {
 				FetchImageView(url: link.originalImage, placeholder: {
@@ -196,10 +196,12 @@ struct LinksSectionView: View {
 			
 			
 			HStack {
-				Text("[\(link.webLink)](\(link.webLink))")
+				Link(link.webLink, destination: URL(string: link.webLink)!)
 					.lineLimit(1)
 					.foregroundStyle(.blue)
 					.tint(.blue)
+					.frame(width: geoProxy.size.width*0.5)
+
 				
 				Spacer()
 				
