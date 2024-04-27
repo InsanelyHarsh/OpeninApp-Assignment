@@ -125,18 +125,12 @@ struct HomeView: View {
 		}
 	}
 	
-	
 	func openWhatsapp(with phoneNumber: String){
-//		let urlWhats = "whatsapp://send?phone=(mobile number with country code)"
-		let urlWhats = "https://api.whatsapp.com/send/?phone=%2B\(phoneNumber)&text&type=phone_number&app_absent=0"
-		if let urlString = urlWhats.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed){
+		let urlWhats = "whatsapp://send?phone=\(phoneNumber)"
+		if let urlString = urlWhats.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) {
 			if let whatsappURL = URL(string: urlString) {
 				if UIApplication.shared.canOpenURL(whatsappURL){
-					if #available(iOS 10.0, *) {
-						UIApplication.shared.open(whatsappURL, options: [:], completionHandler: nil)
-					} else {
-						UIApplication.shared.openURL(whatsappURL)
-					}
+					UIApplication.shared.open(whatsappURL, options: [:], completionHandler: nil)
 				}
 				else {
 					print("Install Whatsapp")

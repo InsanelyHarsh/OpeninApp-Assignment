@@ -16,18 +16,22 @@ import SwiftUI
 struct Openinapp_AssignmentApp: App {
 	@StateObject private var networkMonitor = NetworkMonitor()
 	
-    var body: some Scene {
-        WindowGroup {
-			if networkMonitor.isConnected {
+	var body: some Scene {
+		WindowGroup {
+			switch networkMonitor.networkingMonitorState {
+			case .loading:
+				ProgressView("Loading...")
+			case .connected:
 				RootView()
 					.preferredColorScheme(.light)
-			} else {
+			case .noInternet:
 				ContentUnavailableView(
 					"No Internet Connection",
 					systemImage: "wifi.exclamationmark",
 					description: Text("Please check your connection and try again.")
 				).preferredColorScheme(.dark)
 			}
-        }
-    }
+		}
+	}
 }
+
