@@ -28,3 +28,12 @@
 <img src="Recordings/Screenshot06.png" alt="Player" width="300" height="554">
 <img src="Recordings/Screenshot07.png" alt="Player" width="300" height="554">
 <img src="Recordings/Screenshot08.png" alt="Player" width="300" height="554">
+
+
+<video width="320" height="240" controls>
+	<source src="Recordings/video01.mp4" type="video/mp4">
+</video>
+  
+<video width="320" height="240" controls>
+	<source src="Recordings/video02.mp4" type="video/mp4">
+</video>
