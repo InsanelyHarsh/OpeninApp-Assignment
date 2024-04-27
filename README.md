@@ -20,15 +20,6 @@
 
 ## Demo and Screenshots
 
-<img src="Recordings/Screenshot01.png" alt="No Internet Screen" width="300" height="554">
-<img src="Recordings/Screenshot02.png" alt="Home Screen" width="300" height="554">
-<img src="Recordings/Screenshot03.png" alt="Player" width="300" height="554">
-<img src="Recordings/Screenshot04.png" alt="Shimmer Animation" width="300" height="554">
-<img src="Recordings/Screenshot05.png" alt="Reload Feature" width="300" height="554">
-<img src="Recordings/Screenshot06.png" alt="Player" width="300" height="554">
-<img src="Recordings/Screenshot07.png" alt="Player" width="300" height="554">
-<img src="Recordings/Screenshot08.png" alt="Player" width="300" height="554">
-
 
 <video width="320" height="240" controls>
 	<source src="Recordings/video01.mp4" type="video/mp4">
@@ -37,3 +28,13 @@
 <video width="320" height="240" controls>
 	<source src="Recordings/video02.mp4" type="video/mp4">
 </video>
+
+
+<img src="Recordings/Screenshot01.png" alt="" width="300" height="554">
+<img src="Recordings/Screenshot02.png" alt="" width="300" height="554">
+<img src="Recordings/Screenshot03.png" alt="" width="300" height="554">
+<img src="Recordings/Screenshot04.png" alt="" width="300" height="554">
+<img src="Recordings/Screenshot05.png" alt="" width="300" height="554">
+<img src="Recordings/Screenshot06.png" alt="" width="300" height="554">
+<img src="Recordings/Screenshot07.png" alt="" width="300" height="554">
+<img src="Recordings/Screenshot08.png" alt="" width="300" height="554">
