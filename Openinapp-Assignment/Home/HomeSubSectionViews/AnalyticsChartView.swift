@@ -34,7 +34,7 @@ struct AnalyticsChartView: View {
 				Text("Overview")
 					.frame(maxWidth: .infinity)
 					.foregroundStyle(.gray)
-				
+					.font(.callout)
 				Spacer()
 				
 				HStack{
@@ -48,8 +48,8 @@ struct AnalyticsChartView: View {
 						.foregroundStyle(.gray)
 				}
 				.frame(maxWidth: .infinity)
+				.font(.caption)
 			}
-			.font(.callout)
 			.fontWeight(.light)
 			.frame(maxWidth: .infinity)
 			

@@ -168,10 +168,11 @@ struct LinksSectionView: View {
 					HStack {
 						Text(link.title)
 							.lineLimit(1)
-						
+							.frame(width: geoProxy.size.width*0.35)
 						Spacer()
 						
 						Text("\(link.totalClicks)")
+							.bold()
 					}
 					
 					HStack {
@@ -184,7 +185,7 @@ struct LinksSectionView: View {
 						
 						Text("Clicks")
 					}
-					.font(.caption2)
+					.font(.caption)
 					.foregroundStyle(.gray)
 				}
 			}
@@ -201,7 +202,6 @@ struct LinksSectionView: View {
 					.foregroundStyle(.blue)
 					.tint(.blue)
 					.frame(width: geoProxy.size.width*0.5)
-
 				
 				Spacer()
 				
@@ -211,6 +211,7 @@ struct LinksSectionView: View {
 
 				}, label: {
 					Image(ImageAsset.copyButtonIcon)
+						.scaleEffect(1.25)
 				})
 			}
 			.padding()

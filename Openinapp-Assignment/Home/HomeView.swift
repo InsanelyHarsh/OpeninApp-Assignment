@@ -40,30 +40,35 @@ struct HomeView: View {
 
 								greetingsHeader
 								
+								
 								//Chart, Top Stats and `View Analytics`
 								AnalyticsSectionView(networkingState: homeViewModel.networkingFetchState,
 													 topAnalyticsModel: homeViewModel.dashboardModel.topAnalyticsModel,
 													 proxy: geoProxy)
 								
-								//Link Selection & Search Header, Link List and `View all Links`
-								LinksSectionView(homeViewModel: homeViewModel, geoProxy: geoProxy, scrollProxy: proxy)
-								
-								Button(action: {
-									self.openWhatsapp(with: homeViewModel.dashboardModel.supportWhatsappNumber)
-								}, label: {
-									reachOutButtonLabel(image: ImageAsset.whatsappIcon, buttonTitle: "Talk with us", color: .green)
-								})
-								.tint(.black)
-								
-								Button(action: {}, label: {
-									reachOutButtonLabel(image: ImageAsset.faqIcon, buttonTitle: "Frequently Asked Questions", color: .blue)
-								})
-								.tint(.black)
+								VStack(spacing: 30) {
+									//Link Selection & Search Header, Link List and `View all Links`
+									LinksSectionView(homeViewModel: homeViewModel, geoProxy: geoProxy, scrollProxy: proxy)
+									
+									VStack(spacing: 16) {
+										Button(action: {
+											self.openWhatsapp(with: homeViewModel.dashboardModel.supportWhatsappNumber)
+										}, label: {
+											reachOutButtonLabel(image: ImageAsset.whatsappIcon, buttonTitle: "Talk with us", color: .green)
+										})
+										.tint(.black)
+										
+										Button(action: {}, label: {
+											reachOutButtonLabel(image: ImageAsset.faqIcon, buttonTitle: "Frequently Asked Questions", color: .blue)
+										})
+										.tint(.black)
+									}
+								}
 								
 							}
 							.offset(y: 15)
 							.id("ScrollableContent")
-							.padding(.bottom, geoProxy.size.height*0.25)
+							.padding(.bottom, geoProxy.size.height*0.3)
 						}
 					}
 					.refreshable {
@@ -131,8 +136,7 @@ struct HomeView: View {
 			if let whatsappURL = URL(string: urlString) {
 				if UIApplication.shared.canOpenURL(whatsappURL){
 					UIApplication.shared.open(whatsappURL, options: [:], completionHandler: nil)
-				}
-				else {
+				} else {
 					print("Install Whatsapp")
 				}
 			}
